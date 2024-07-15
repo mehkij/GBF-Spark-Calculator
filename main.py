@@ -5,8 +5,8 @@ def spark(crystals = 0, tickets = 0):
     remaining_tickets = round((spark - total) / ticket_value)
 
     print(f"Total value of your crystals and tickets: {total}")
-    print(f"Amount of crystals remaining until spark: {spark - total}")
-    print(f"The amount of tickets you would need to spark: {remaining_tickets}")
+    print(f"Amount of crystals remaining until spark: {spark - total if total <= spark else 0}")
+    print(f"The amount of tickets you would need to spark: {remaining_tickets if total <= spark else 0}")
 
     if total >= spark:
         print("Your progress: 100%")
