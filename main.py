@@ -17,6 +17,12 @@ def main():
     crystals = int(input("How many crystals do you have?\n"))
     tickets = int(input("How many tickets do you have?\n"))
 
+    if crystals < 0:
+        raise ValueError("Amount of crystals cannot be negative.")
+    
+    if tickets < 0:
+        raise ValueError("Amount of tickets cannot be negative.")
+
     spark(crystals, tickets)
 
 main()
